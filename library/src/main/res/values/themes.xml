@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Muume.Actionbar.Spinner" parent="android:Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+</resources>
