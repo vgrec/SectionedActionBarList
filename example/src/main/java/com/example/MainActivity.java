@@ -59,8 +59,8 @@ public class MainActivity extends Activity {
         configuration.setSectionTitleColorResource(R.color.teal);
         configuration.setDropdownItemColorResources(R.color.light_blue, R.color.dark_grey);
 
-        SectionedActionBarList actionBarSpinner = new SectionedActionBarList(this).from(sections);
-        actionBarSpinner.setItemSelectedListener(new ItemSelectedListener() {
+        SectionedActionBarList actionBarList = new SectionedActionBarList(this).from(sections);
+        actionBarList.setItemSelectedListener(new ItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id, String sectionName, String itemName) {
                 Toast.makeText(MainActivity.this, "Section: " + sectionName + ", Item: " + itemName, Toast.LENGTH_LONG).show();
