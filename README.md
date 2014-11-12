@@ -31,8 +31,8 @@ types.add("App Reviews");
 types.add("Box Talks");
 sections.add(topics);
 
-SectionedActionBarSpinner actionBarSpinner = new SectionedActionBarSpinner(this).from(sections);
-actionBarSpinner.setItemSelectedListener(new ItemSelectedListener() {
+SectionedActionBarList actionBarList = new SectionedActionBarList(this).from(sections);
+actionBarList.setItemSelectedListener(new ItemSelectedListener() {
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id, String sectionName, String itemName) {
       Toast.makeText(MainActivity.this, "Section: " + sectionName + ", Item: " + itemName, Toast.LENGTH_LONG).show();
@@ -42,7 +42,7 @@ actionBarSpinner.setItemSelectedListener(new ItemSelectedListener() {
 <h3>Configuration</h3>
 Small customizations can be done to fit with your application design:
 ```java
-SpinnerConfiguration configuration = new SpinnerConfiguration(this);
+ListConfiguration configuration = new ListConfiguration(this);
 configuration.setActionBarItemColorResource(R.color.brown);
 configuration.setIndicatorDrawableResource(R.drawable.spinner_indicator_dark);
 configuration.setSectionTitleColorResource(R.color.teal);
