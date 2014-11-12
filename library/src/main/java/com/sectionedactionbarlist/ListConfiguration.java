@@ -5,7 +5,7 @@ import android.content.Context;
 /**
  * @author vgrec, created on 10/15/14.
  */
-public class SpinnerConfiguration {
+public class ListConfiguration {
     private int titleColorRes;
     private int actionBarItemColor;
     private int indicator;
@@ -13,7 +13,7 @@ public class SpinnerConfiguration {
     private int stateActivated;
     private int stateNormal;
 
-    public SpinnerConfiguration(Context context) {
+    public ListConfiguration(Context context) {
         this.context = context;
         // Default configurations
         titleColorRes = getColorRes(R.color.dark_grey);

@@ -8,8 +8,8 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.sectionedactionbarlist.ItemSelectedListener;
-import com.sectionedactionbarlist.SectionedActionBarSpinner;
-import com.sectionedactionbarlist.SpinnerConfiguration;
+import com.sectionedactionbarlist.ListConfiguration;
+import com.sectionedactionbarlist.SectionedActionBarList;
 import com.sectionedactionbarlist.model.Section;
 
 import java.util.ArrayList;
@@ -53,13 +53,13 @@ public class MainActivity extends Activity {
         types.add("Office Hours");
         sections.add(topics);
 
-        SpinnerConfiguration configuration = new SpinnerConfiguration(this);
+        ListConfiguration configuration = new ListConfiguration(this);
         configuration.setActionBarItemColorResource(R.color.brown);
         configuration.setIndicatorDrawableResource(R.drawable.spinner_indicator_dark);
         configuration.setSectionTitleColorResource(R.color.teal);
         configuration.setDropdownItemColorResources(R.color.light_blue, R.color.dark_grey);
 
-        SectionedActionBarSpinner actionBarSpinner = new SectionedActionBarSpinner(this).from(sections);
+        SectionedActionBarList actionBarSpinner = new SectionedActionBarList(this).from(sections);
         actionBarSpinner.setItemSelectedListener(new ItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id, String sectionName, String itemName) {

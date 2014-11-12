@@ -19,25 +19,25 @@ import java.util.List;
 /**
  * @author vgrec, created on 9/2/14.
  */
-public class SectionedActionBarSpinner {
+public class SectionedActionBarList {
 
     private ActionBar actionBar;
     private ItemSelectedListener listener;
     private List<SpinnerItem> items = new ArrayList<SpinnerItem>();
     private LayoutInflater inflater;
-    private SpinnerConfiguration configuration;
+    private ListConfiguration configuration;
 
-    public SectionedActionBarSpinner(Activity activity) {
-        this(activity, new SpinnerConfiguration(activity));
+    public SectionedActionBarList(Activity activity) {
+        this(activity, new ListConfiguration(activity));
     }
 
-    public SectionedActionBarSpinner(Activity activity, SpinnerConfiguration configuration) {
+    public SectionedActionBarList(Activity activity, ListConfiguration configuration) {
         this.actionBar = activity.getActionBar();
         this.configuration = configuration;
         this.inflater = activity.getLayoutInflater();
     }
 
-    public SectionedActionBarSpinner from(List<Section> sections) {
+    public SectionedActionBarList from(List<Section> sections) {
         for (Section section : sections) {
             items.add(new SpinnerItem(true, section.getName()));
             for (String item : section.getItems()) {
