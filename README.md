@@ -1,7 +1,9 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectionedActionBarList-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1287)
+
 <h1>SectionedActionBarList</h1>
 <hr/>
 
-This Android library allows you to replace the drop down navigation list when the items in the list are needed to be grouped by sections. It was inspired from the Google I/O 2014 app how sessions are grouped in the ActionBar list. 
+A lightweight Android library that allows the drop down navigation list items to be grouped in sections. It was inspired from the Google I/O 2014 app how sessions are grouped in the ActionBar list. 
 
 ![alt tag](screens/default.png)
 
